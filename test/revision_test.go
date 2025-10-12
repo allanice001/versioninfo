@@ -16,9 +16,9 @@ func Test(t *testing.T) {
 			gomod := `
 module main
 
-require github.com/earthboundkid/versioninfo/v2 v2.0.0
+require github.com/allanice001/versioninfo/v2 v2.0.0
 
-replace github.com/earthboundkid/versioninfo/v2 => WORKDIR/..
+replace github.com/allanice001/versioninfo/v2 => WORKDIR/..
 `
 			wd, _ := os.Getwd()
 			gomod = strings.Replace(gomod, "WORKDIR", wd, 1)

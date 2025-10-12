@@ -1,4 +1,4 @@
-module github.com/earthboundkid/versioninfo/v2/test
+module github.com/allanice001/versioninfo/v2/test
 
 go 1.22
 
