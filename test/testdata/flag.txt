@@ -7,12 +7,17 @@ env GIT_AUTHOR_NAME=$GIT_COMMITTER_NAME
 env GIT_AUTHOR_EMAIL=$GIT_COMMITTER_EMAIL
 
 exec git init --initial-branch=m
-exec git add .
-exec git commit -m 'init'
 
 # Setup Go and compile
 env GOPATH=$WORK/go
 env GOCACHE=$WORK/gocache
+env GOWORK=off
+env GOFLAGS=
+exec go mod tidy
+
+exec git add .
+exec git commit -m 'init'
+
 exec go install -buildvcs=true .
 
 # Test output
