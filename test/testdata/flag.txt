@@ -18,7 +18,7 @@ exec go install -buildvcs=true .
 # Test output
 exec $WORK/go/bin/main -v
 ! stdout unknown
-stdout 'Version: \(devel\)'
+stdout 'Version: (\(devel\)|v[0-9]+\.[0-9]+\.[0-9]+-[0-9]{14}-[0-9a-f]+)'
 stdout Revision:
 stdout Committed:
 ! stderr .
@@ -26,7 +26,7 @@ stdout Committed:
 exec $WORK/go/bin/main -version
 ! stdout unknown
 ! stdout done
-stdout 'Version: \(devel\)'
+stdout 'Version: (\(devel\)|v[0-9]+\.[0-9]+\.[0-9]+-[0-9]{14}-[0-9a-f]+)'
 stdout Revision:
 stdout Committed:
 ! stderr .
