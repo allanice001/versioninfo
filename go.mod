@@ -1,3 +1,3 @@
 module github.com/allanice001/versioninfo/v2
 
-go 1.26.1
+go 1.26.2
